@@ -1,71 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Form</title>
+    <title>Templete</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container  mx-auto text-auto  px-5 py-3 mt-5 " id="container">
-        <h3 class="text-center my-3" >Registration Form</h3>
-        <div class="container" >
-            <form action="#" onsubmit="return myform()" >
-                <div class="form-group">
-                    <label for="">Full Name</label>
-                    <input type="text" id="name" class="form-control" required autocomplete="off"
-                        placeholder="Enter full name" onkeyup="namefun()" >
-                    <small id="nameErr" style="color: red;"></small>
-                </div>
-                <div class="form-group">
-                    <label for="">Email</label>
-                    <input type="email" id="email" class="form-control" required autocomplete="off"
-                        placeholder="Enter email address" onkeyup="emailfun()">
-                    <small id="emailErr" style="color: red;"></small>
+    <!-- nav bar part  -->
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navbar">
+       <img  class="navbar-brand" src="image/logo.png" alt="">
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse" id="collapsibleNavbar">
+           <ul class="navbar-nav mx-5">
+               <li  class="navbar-item mx-3">
+                <button  onclick="scrollHome()">Home</button>
+               </li>
+               <li class="navbar-item mx-3">
+                <button  onclick="scrollAbout()">About Us</button>
+            </li>
+            <li class="navbar-item mx-3">
+                <button  onclick="scrollService()">Service</button>
+            </li>
+            <li class="navbar-item mx-3">
+                <button  onclick="scrollGallary()">Gallary</button>
 
-                </div>
-                <div class="form-group">
-                    <label for="">Phone No.</label>
-                    <input type="number" id="phone" class="form-control" required autocomplete="off"
-                        placeholder="Enter phone no." onkeyup="phonefun()">
-                    <small id="phoneErr" style="color: red;"></small>
+            </li>
+            <li class="navbar-item mx-3">
+                <button  onclick="scrollContact()">Contact Us</button>
+            </li>
+           </ul>
+       </div>
+   </nav>
 
-                </div>
-                <div class="form-group">
-                    <label for="">Password</label>
-                    <input type="password" id="password" class="form-control" required autocomplete="off"
-                        placeholder="Enter strong password" onkeyup="passwordfun()">
-                     <small id="passwordErr" style="color: red;"></small>
 
-                </div>
-                <div class="form-group">
-                    <label for="">Confirm Password</label>
-                    <input type="password" id="cpassword" class="form-control" required autocomplete="off"
-                        placeholder="Enter again password" onkeyup="cpasswordfun()">
-                     <small id="cpasswordErr" style="color: red;"></small>
+   <!-- sliding part  -->
+   <div class="container-fluid" id="slide">
+       <button id="prev" onclick="prev()"><</button>
+       <img src="image/download1.jpg" class="img-fluid" alt="" id="slide-img">
+       <button id="next" onclick="next()">></button>
+   </div>
 
-                </div>
-                <button class="btn btn-block btn-success w-75 mx-auto mt-5">Submit</button>
-            </form>
+
+   <!-- about us page  -->
+  <div class="container-fluid">
+      <h1 class="text-center mt-5 p-5 bg-primary" id="about">About WebCoir</h1>
+      <div class="container mt-5">
+          <div class="row">
+              <div class="col-md-6 mt-3 p-4" id="text">Established in the year 2013, Webcoir IT Solutions pvt ltd is a Web based Development firm in the New World Economy that aims at giving the best services to the clients.
+
+                With us, you can rest assured to get the accountable and reliable services which will not outsource your important work. We are a team of highly trained professionals, engineers, designers and developers etc who make it sure that services delivered are same as promised.
+                
+                We are a trusted IT firm with skilled work force at our back. Proficient, dedicated and loyal in whatever we do, we have the reasons enough for why we are among the most trusted company with multinational internet design. Trust us for our accountability and competitively priced services and we are sure that you will never get disappointed.
+                
+                We are a target oriented company who are determined to provide the best services to our clients within the promised duration of time because we believe that service delayed is service denied.
+                
+                Webcoir IT Solutions PVT LTD is one of the most reliable companies that provide you unmatched services. Trust us for once and you shall never want to leave us.</div>
+              <div class="col pt-5 mb-3">
+                  <img src="image/about_page_img1.png" alt="" class="img-fluid">
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+
+  <!-- servic part  -->
+ <div class="container-fluid">
+     <h1 class=" mt-3 mb-4 text-center" id="service">services</h1>
+    <div class="container">
+        <div class="row service">
+            <div class="col-md-4 service-img">
+              <img src="image/download1.jpg" alt="" class="img-fluid">
+              <h4>Web Development</h4>
+            </div>
+            <div class="col-md-4">
+              <img src="image/download2.jpg" alt="" class="img-fluid">
+              <h4>Android Development</h4>
+            </div>
+            <div class="col-md-4">
+              <img src="image/download3.jpg" alt="" class="img-fluid">
+              <h4>Digital Marketing</h4>
+            </div>
+            <div class="col-md-4">
+              <img src="image/download4.jpg" alt="" class="img-fluid">
+              <h4>Email Marketing</h4>
+            </div>
+            <div class="col-md-4">
+              <img src="image/download5.jpg" alt="" class="img-fluid">
+              <h4>IOS Development</h4>
+            </div>
+            <div class="col-md-4">
+              <img src="image/download6.jpg" alt="" class="img-fluid">
+              <h4>Custom Website Development</h4>
+            </div>
+            <div class="col-md-4">
+                <img src="image/download1.jpg" alt="" class="img-fluid">
+                <h4>E-Commerce Development</h4>
+              </div>
+              <div class="col-md-4">
+                <img src="image/download2.jpg" alt="" class="img-fluid">
+                <h4>Search Engine Optimization</h4>
+              </div>
+              <div class="col-md-4">
+                <img src="image/download3.jpg" alt="" class="img-fluid">
+                <h4>Seo Smo Packages</h4>
+              </div>
+              <div class="col-md-4">
+                <img src="image/download4.jpg" alt="" class="img-fluid">
+                <h4>Data Science</h4>
+              </div>
+              <div class="col-md-4">
+                <img src="image/download5.jpg" alt="" class="img-fluid">
+                <h4>Artificial Intelligence</h4>
+              </div>
+              <div class="col-md-4">
+                <img src="image/download6.jpg" alt="" class="img-fluid">
+                <h4>Robotics</h4>
+              </div>
         </div>
+    </div>
+ </div>
 
+
+ <!-- Gallary Part  -->
+ <div class="container-fluid mt-5 ">
+     <h2 class="text-center p-3 bg-primary mb-5" id='gallary'>Gallary</h2>
+    <div class="container">
+        <div class="row gallary">
+            <div class="col-md-4">
+                <img src="image/download1.jpg" alt="" class="img-fluid" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(1)">
+            </div>
+            <div class="col-md-4">
+                <img src="image/download2.jpg" alt="" class="img-fluid" id="img2" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(2)">
+            </div>
+            <div class="col-md-4">
+                <img src="image/download3.jpg" alt="" class="img-fluid" id="img3" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(3)">
+            </div>
+            <div class="col-md-4">
+                <img src="image/download4.jpg" alt="" class="img-fluid" id="img4" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(4)">
+            </div>
+            <div class="col-md-4">
+                <img src="image/download5.jpg" alt="" class="img-fluid" id="img5" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(5)">
+            </div>
+            <div class="col-md-4">
+                <img src="image/download6.jpg" alt="" class="img-fluid" id="img6" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(6)">
+            </div>
+            <div class="col-md-4">
+               <img src="image/download1.jpg" alt="" class="img-fluid" id="img7" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(1)">
+           </div>
+           <div class="col-md-4">
+               <img src="image/download2.jpg" alt="" class="img-fluid" id="img8" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(2)">
+           </div>
+           <div class="col-md-4">
+               <img src="image/download3.jpg" alt="" class="img-fluid" id="img9" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(3)">
+           </div>
+           <div class="col-md-4">
+               <img src="image/download4.jpg" alt="" class="img-fluid" id="img10" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(4)">
+           </div>
+           <div class="col-md-4">
+               <img src="image/download5.jpg" alt="" class="img-fluid" id="img11" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(5)">
+           </div>
+           <div class="col-md-4">
+               <img src="image/download6.jpg" alt="" class="img-fluid" id="img12" data-toggle="modal" data-target="#myModal" id="img1" onclick="fun(6)">
+           </div>
+            
+        </div>
+    </div>
+ </div>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <img src="" alt="" id="model-img">
+        </div> 
+      </div>
+    </div>
+  </div>
+
+
+  <!-- contact us part  -->
+  <div class="container mt-5 mb-5">
+      <h3 class="bg-primary text-center my-4 p-2 " id="contact">Contact Us</h3>
+        <h2 class="text-center m-2 text-danger" id='check'></h2>
+      <div class="container mt-5 w-50 mx-auto">
+        <form action="" onsubmit="return myform()">
+            <div class="form-group ">
+                <label for="">Name</label>
+                <input type="text" class="form-control" name="name" id="name" required autocomplete="off" onkeyup="namefun()">
+                <span id="name-message"></span>
+            </div>
+            <div class="form-group ">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="password" id="password" required autocomplete="off" onkeyup="passfun()">
+                <span id="pass-message"></span>
+            </div>
+            <div class="form-group ">
+                <label for="">Email</label>
+                <input type="email" class="form-control" name=email id="email" required autocomplete="off" onkeyup="emailfun()">
+                <span id="email-message"></span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success btn-block mt-5">Submit</button>
+               
+            </div>
+            
+        </form>
+    </div>
     </div>
 
-<script src="function.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</body>
+  <!-- footer part  -->
+  <h5 class="bg-primary p-2 text-center mt-5">@webcoir it Solutions</h5>
 
+  
+
+<script src="function.js"></script>
+</body>
 </html>
