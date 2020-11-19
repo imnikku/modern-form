@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Form</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container  mx-auto text-auto  px-5 py-3 mt-5 " id="container">
+        <h3 class="text-center my-3" >Registration Form</h3>
+        <div class="container" >
+            <form action="#" onsubmit="return myform()" >
+                <div class="form-group">
+                    <label for="">Full Name</label>
+                    <input type="text" id="name" class="form-control" required autocomplete="off"
+                        placeholder="Enter full name" onkeyup="namefun()" >
+                    <small id="nameErr" style="color: red;"></small>
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" id="email" class="form-control" required autocomplete="off"
+                        placeholder="Enter email address" onkeyup="emailfun()">
+                    <small id="emailErr" style="color: red;"></small>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Phone No.</label>
+                    <input type="number" id="phone" class="form-control" required autocomplete="off"
+                        placeholder="Enter phone no." onkeyup="phonefun()">
+                    <small id="phoneErr" style="color: red;"></small>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" id="password" class="form-control" required autocomplete="off"
+                        placeholder="Enter strong password" onkeyup="passwordfun()">
+                     <small id="passwordErr" style="color: red;"></small>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Confirm Password</label>
+                    <input type="password" id="cpassword" class="form-control" required autocomplete="off"
+                        placeholder="Enter again password" onkeyup="cpasswordfun()">
+                     <small id="cpasswordErr" style="color: red;"></small>
+
+                </div>
+                <button class="btn btn-block btn-success w-75 mx-auto mt-5">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+<script src="function.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

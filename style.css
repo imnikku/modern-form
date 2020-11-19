@@ -1,0 +1,22 @@
+@media only screen and (max-width: 900px) {
+    #container {
+      width: 100%;
+      border-radius: 20px;
+      background-color: rgb(206, 247, 233);
+      box-shadow: 0 0 10px rgb(158, 152, 152);
+
+
+    }
+  }
+  @media only screen and (min-width: 901px) {
+    #container {
+      width: 50%;
+      border-radius: 30px;
+      background-color: rgb(206, 247, 233);
+      box-shadow: 0 0 10px rgb(158, 152, 152);
+    }
+  }
+  .btn{
+      box-shadow: 0 0 10px rgb(158, 152, 152);
+
+  }
