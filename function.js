@@ -1,7 +1,7 @@
 function namefun(){
     let name=document.getElementById('name').value;
     let namepatt=/^[A-Za-z .]{3,30}$/;
-    if(namepatt.test(name)){
+    if(namepatt.test(name.trim())){
         document.getElementById('name').style='border:2px solid green';
         document.getElementById('nameErr').innerText='';
         return true;
